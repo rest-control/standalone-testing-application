@@ -1,0 +1,20 @@
+{
+  "name": "rest-control/standalone-testing-application",
+  "description": "PHP standalone testing application using Rest-Control",
+  "keywords": ["testing", "rest", "api"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kamil Szela",
+      "email": "kamil.szela@cothe.pl"
+    }
+  ],
+  "require": {
+    "rest-control/rest-control": "dev-master",
+    "symfony/console": "^3.4"
+  },
+  "autoload": {
+    "classmap": ["tests"]
+  },
+  "minimum-stability": "dev"
+}
