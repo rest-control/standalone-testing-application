@@ -2,7 +2,11 @@
 
 return [
     'tests' => [
-        'Tests\\',
+        'Tests\\' => [
+            'path'         => dirname(__FILE__) . '/tests/',
+            'classSuffix'  => 'Test.php',
+            'methodPrefix' => 'test',
+        ],
     ],
     'responseFilters' => [
         //..

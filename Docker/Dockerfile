@@ -1,4 +1,4 @@
-FROM php:7.0-cli
+FROM php:7.1-cli
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && rm -fr /root/.composer
