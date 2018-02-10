@@ -1,0 +1,8 @@
+tests:
+  Examples\:
+    path: {{FILE_DIR}}/examples
+    classSuffix: Test.php
+    methodPrefix: example
+
+#responseFilters:
+#  - \Sample\Filter\Response\Class::class

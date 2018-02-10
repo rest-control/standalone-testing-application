@@ -10,11 +10,13 @@
     }
   ],
   "require": {
-    "rest-control/rest-control": "dev-master",
+    "rest-control/rest-control": "0.2.x-dev",
     "symfony/console": "^3.4"
   },
   "autoload": {
-    "classmap": ["tests"]
+    "psr-4": {
+      "Examples\\": "./examples"
+    }
   },
   "minimum-stability": "dev"
 }
