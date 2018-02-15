@@ -5,4 +5,4 @@ tests:
   methodPrefix: example
 
 #responseFilters:
-#  - \Sample\Filter\Response\Class::class
+#  - \Sample\Filter\Response\Class
