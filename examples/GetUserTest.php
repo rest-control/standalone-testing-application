@@ -19,7 +19,7 @@ class GetUserTest extends AbstractTestCase
         $userItem = new UserObject();
 
         return $this->send()
-                    ->get('https://jsonplaceholder.typicode.com/users/1')
+                    ->get('sample.service/users/1')
                     ->expectedResponse()
                     ->json()
                     ->hasItem($userItem);
@@ -47,7 +47,7 @@ class GetUserTest extends AbstractTestCase
         ]);
 
         return $this->send()
-            ->get('https://jsonplaceholder.typicode.com/users/1')
+            ->get('sample.service/users/1')
             ->expectedResponse()
             ->json()
             ->hasItem($userItem);
@@ -68,7 +68,7 @@ class GetUserTest extends AbstractTestCase
         ]);
 
         return $this->send()
-            ->get('https://jsonplaceholder.typicode.com/users/1')
+            ->get('sample.service/users/1')
             ->expectedResponse()
             ->json()
             ->hasItem($userItem, null, true);

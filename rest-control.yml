@@ -3,6 +3,11 @@ tests:
   path: {{FILE_DIR}}/examples
   classSuffix: Test.php
   methodPrefix: example
-
+#Api mocked responses
+apiMockResponses:
+  - \Examples\ServerResponses\GetUser
+#Api Client
+apiClient: \RestControl\ApiClient\MockApiClient
+#Custom response filters
 #responseFilters:
 #  - \Sample\Filter\Response\Class
