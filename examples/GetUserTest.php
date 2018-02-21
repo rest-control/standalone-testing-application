@@ -71,6 +71,6 @@ class GetUserTest extends AbstractTestCase
             ->get('https://jsonplaceholder.typicode.com/users/1')
             ->expectedResponse()
             ->json()
-            ->hasItem($userItem, true);
+            ->hasItem($userItem, null, true);
     }
 }
