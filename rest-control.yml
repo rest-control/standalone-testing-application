@@ -6,6 +6,7 @@ tests:
 #Api mocked responses
 apiMockResponses:
   - \Examples\ServerResponses\GetUser
+  - \Examples\ServerResponses\GetUsers
 #Api Client
 apiClient: \RestControl\ApiClient\MockApiClient
 #Custom response filters
