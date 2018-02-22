@@ -5,13 +5,13 @@ namespace Examples;
 use Examples\Objects\UserObject;
 use RestControl\TestCase\AbstractTestCase;
 
-class GetUserTest extends AbstractTestCase
+class HasItemTest extends AbstractTestCase
 {
     /**
      * @test(
      *     title="Find example user.",
      *     description="Find example user with UserObject item validation.",
-     *     tags="get users"
+     *     tags="hasItem validateItem"
      * )
      */
     public function exampleFindUser()
@@ -29,7 +29,7 @@ class GetUserTest extends AbstractTestCase
      * @test(
      *     title="Find example user with required values.",
      *     description="Find example user with UserObject item validation and few required values.",
-     *     tags="get users requiredValues"
+     *     tags="hasItem checkValues"
      * )
      */
     public function exampleFindUser1WithRequiredValues()
@@ -57,7 +57,7 @@ class GetUserTest extends AbstractTestCase
      * @test(
      *     title="Find example user with required values.",
      *     description="Find example user with UserObject item validation only with given values. This test should fail.",
-     *     tags="get users requiredValues"
+     *     tags="hasItem requiredValues"
      * )
      */
     public function exampleFindUser1WithOnlyGivenRequiredValuesFails()
