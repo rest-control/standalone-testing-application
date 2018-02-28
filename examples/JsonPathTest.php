@@ -15,11 +15,11 @@ class JsonPathTest extends AbstractTestCase
      */
     public function exampleSimpleValue()
     {
-        return $this->send()
+        return send()
             ->get('sample.service/users/1')
             ->expectedResponse()
             ->json()
-            ->jsonPath('$.address.street', $this->endsWith('Light'));
+            ->jsonPath('$.address.street', endsWith('Light'));
     }
 
     /**
@@ -31,11 +31,11 @@ class JsonPathTest extends AbstractTestCase
      */
     public function exampleSimpleValueOnList()
     {
-        return $this->send()
+        return send()
             ->get('sample.service/users')
             ->expectedResponse()
             ->json()
-            ->jsonPath('$..company.constValue', $this->endsWith('Value'));
+            ->jsonPath('$..company.constValue', endsWith('Value'));
     }
 
     /**
@@ -47,7 +47,7 @@ class JsonPathTest extends AbstractTestCase
      */
     public function exampleSimpleValueWithCallback()
     {
-        return $this->send()
+        return send()
                     ->get('sample.service/users')
                     ->expectedResponse()
                     ->json()
