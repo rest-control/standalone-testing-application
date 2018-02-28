@@ -18,11 +18,11 @@ class HasItemTest extends AbstractTestCase
     {
         $userItem = new UserObject();
 
-        return $this->send()
-                    ->get('sample.service/users/1')
-                    ->expectedResponse()
-                    ->json()
-                    ->hasItem($userItem);
+        return send()
+            ->get('sample.service/users/1')
+            ->expectedResponse()
+            ->json()
+            ->hasItem($userItem);
     }
 
     /**
@@ -46,7 +46,7 @@ class HasItemTest extends AbstractTestCase
             ],
         ]);
 
-        return $this->send()
+        return send()
             ->get('sample.service/users/1')
             ->expectedResponse()
             ->json()
@@ -67,7 +67,7 @@ class HasItemTest extends AbstractTestCase
             'name' => 'Leanne Graham',
         ]);
 
-        return $this->send()
+        return send()
             ->get('sample.service/users/1')
             ->expectedResponse()
             ->json()
