@@ -12,3 +12,5 @@ apiClient: \RestControl\ApiClient\MockApiClient
 #Custom response filters
 #responseFilters:
 #  - \Sample\Filter\Response\Class
+variables:
+  training: http://{{TRAINING_SERVER_CONTAINER_WEB_IP}}/
