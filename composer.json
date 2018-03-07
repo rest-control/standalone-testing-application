@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "rest-control/rest-control": "0.4.x-dev",
+    "rest-control/rest-control": "dev-master",
     "symfony/console": "^3.4"
   },
   "autoload": {
