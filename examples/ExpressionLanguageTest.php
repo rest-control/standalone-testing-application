@@ -15,13 +15,13 @@ class ExpressionLanguageTest extends AbstractTestCase
      */
     public function exampleEndsWith()
     {
-        return $this->send()
+        return send()
             ->get('sample.service/users/1')
             ->expectedResponse()
             ->json()
-            ->jsonPath('$.address.street', $this->endsWith('Light'))
-            ->jsonPath('$.email', $this->endsWith('incere@april.biz'))
-            ->jsonPath('$.phone', $this->endsWith('-770-736-8031 x56442'));
+            ->jsonPath('$.address.street', endsWith('Light'))
+            ->jsonPath('$.email', endsWith('incere@april.biz'))
+            ->jsonPath('$.phone', endsWith('-770-736-8031 x56442'));
     }
 
     /**
@@ -33,13 +33,13 @@ class ExpressionLanguageTest extends AbstractTestCase
      */
     public function exampleContainsString()
     {
-        return $this->send()
+        return send()
             ->get('sample.service/users/1')
             ->expectedResponse()
             ->json()
-            ->jsonPath('$.address.street', $this->containsString('ight'))
-            ->jsonPath('$.phone', $this->containsString('736-8031'))
-            ->jsonPath('$.company.bs', $this->containsString('harness'));
+            ->jsonPath('$.address.street', containsString('ight'))
+            ->jsonPath('$.phone', containsString('736-8031'))
+            ->jsonPath('$.company.bs', containsString('harness'));
     }
 
     /**
@@ -51,13 +51,13 @@ class ExpressionLanguageTest extends AbstractTestCase
      */
     public function exampleStartsWith()
     {
-        return $this->send()
+        return send()
             ->get('sample.service/users/1')
             ->expectedResponse()
             ->json()
-            ->jsonPath('$.address.street', $this->startsWith('Kulas'))
-            ->jsonPath('$.phone', $this->startsWith('1-770-736'))
-            ->jsonPath('$.company.catchPhrase', $this->startsWith('Multi-layered client'));
+            ->jsonPath('$.address.street', startsWith('Kulas'))
+            ->jsonPath('$.phone', startsWith('1-770-736'))
+            ->jsonPath('$.company.catchPhrase', startsWith('Multi-layered client'));
     }
     /**
      * @test(
@@ -68,12 +68,12 @@ class ExpressionLanguageTest extends AbstractTestCase
      */
     public function exampleEqualsTo()
     {
-        return $this->send()
+        return send()
             ->get('sample.service/users/1')
             ->expectedResponse()
             ->json()
-            ->jsonPath('$.id', $this->equalsTo(1))
-            ->jsonPath('$.phone', $this->equalsTo('1-770-736-8031 x56442'))
-            ->jsonPath('$.company.catchPhrase', $this->equalsTo('Multi-layered client-server neural-net'));
+            ->jsonPath('$.id', equalsTo(1))
+            ->jsonPath('$.phone', equalsTo('1-770-736-8031 x56442'))
+            ->jsonPath('$.company.catchPhrase', equalsTo('Multi-layered client-server neural-net'));
     }
 }

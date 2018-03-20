@@ -19,7 +19,7 @@ class HasItemsTest extends AbstractTestCase
     {
         $userItemsCollection = new ResponseItemsCollection(UserObject::class);
 
-        return $this->send()
+        return send()
             ->get('sample.service/users')
             ->expectedResponse()
             ->json()
@@ -64,7 +64,7 @@ class HasItemsTest extends AbstractTestCase
                 ])
             );
 
-        return $this->send()
+        return send()
             ->get('sample.service/users')
             ->expectedResponse()
             ->json()
