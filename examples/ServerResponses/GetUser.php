@@ -109,7 +109,7 @@ class GetUser implements MockApiResponseInterface
     public function getApiClientResponse(ApiClientRequest $request, array $routeParams)
     {
         if(!isset($routeParams['id'])) {
-            return new ApiClientResponse(404, [], '');
+            return new ApiClientResponse(404, [], '', 0);
         }
 
         return $this->getUser($request, $routeParams['id']);
@@ -124,11 +124,13 @@ class GetUser implements MockApiResponseInterface
     protected function getUser(ApiClientRequest $request, $userId)
     {
         if(!isset($this->users[$userId])) {
-            return new ApiClientResponse(404, '');
+            return new ApiClientResponse(404, '', 0);
         }
+
+        $body = json_encode($this->users[$userId]);
 
         return new ApiClientResponse(200, [
             'Content-Type' => 'application/json'
-        ], json_encode($this->users[$userId]));
+        ], $body, strlen($body));
     }
 }

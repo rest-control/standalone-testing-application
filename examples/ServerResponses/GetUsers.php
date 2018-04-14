@@ -29,8 +29,10 @@ class GetUsers extends GetUser
      */
     public function getApiClientResponse(ApiClientRequest $request, array $routeParams)
     {
+        $body = json_encode($this->users);
+
         return new ApiClientResponse(200, [
             'Content-Type' => 'application/json'
-        ], json_encode($this->users));
+        ], $body, strlen($body));
     }
 }
