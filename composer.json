@@ -3,19 +3,13 @@
   "description": "PHP standalone testing application using Rest-Control",
   "keywords": ["testing", "rest", "api"],
   "license": "MIT",
-  "authors": [
-    {
-      "name": "Kamil Szela",
-      "email": "kamil.szela@cothe.pl"
-    }
-  ],
   "require": {
     "rest-control/rest-control": "dev-master",
     "symfony/console": "^3.4"
   },
   "autoload": {
     "psr-4": {
-      "Examples\\": "./examples"
+      "Tests\\": "./tests"
     }
   },
   "minimum-stability": "dev"

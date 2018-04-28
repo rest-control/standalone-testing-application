@@ -1,16 +1,13 @@
 tests:
-  namespace: Examples\
-  path: {{FILE_DIR}}/examples
+  namespace: Tests\
+  path: {{FILE_DIR}}/tests
   classSuffix: Test.php
-  methodPrefix: example
+  methodPrefix: test
 #Api mocked responses
-apiMockResponses:
-  - \Examples\ServerResponses\GetUser
-  - \Examples\ServerResponses\GetUsers
+#apiMockResponses:
+#  - Sample\Class\Path
 #Api Client
 apiClient: \RestControl\ApiClient\MockApiClient
 #Custom response filters
 #responseFilters:
 #  - \Sample\Filter\Response\Class
-variables:
-  training: http://{{TRAINING_SERVER_CONTAINER_WEB_IP}}/
