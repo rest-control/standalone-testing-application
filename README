@@ -1,3 +1,12 @@
-REST-Control Standalone application - Project in progress
+## Standalone testing application for RestControl
 
-Standalone application for testing and validation REST services.
+## Installation
+```
+make build
+```
+
+## Usage
+```
+#Run all tests
+make run-tests
+```
